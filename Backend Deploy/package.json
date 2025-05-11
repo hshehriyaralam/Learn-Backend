@@ -1,0 +1,21 @@
+{
+  "name": "backend-deploy",
+  "version": "1.0.0",
+  "description": "first backend code ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev" : "nodemon index.js"
+  },
+  "keywords": [
+    "code",
+    "backend"
+  ],
+  "author": "Shehriyar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
