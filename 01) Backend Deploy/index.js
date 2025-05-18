@@ -22,7 +22,6 @@ app.get('/editincome', (req,res) => {
 // app ko listen bh krna hOga 
 app.listen(process.env.PORT, () => {
     console.log("Backend code Run in ",{port});
-    
 })
 
 // kch bh changes ke bad server restart krna hOta hai  isi lye nodemon pkg ka use kya jata hai 
