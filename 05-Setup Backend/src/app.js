@@ -17,6 +17,14 @@ app.use(express.urlencoded({extended : true, limit : '16kb'})) // jab frontend s
 app.use(express.static("public"))
 app.use(cookieParser())
 
+//import Roy=utes
+import userRoute from "./Routes/user.route.js"
 
+// declaretions
+app.use('/api/v1/user', userRoute)// bs route ko middleware main use kr lya ab jo bh changing hOgi userRoute main hOgi
+
+app.get('/', (req,res) => {
+    res.send("Home Rotes")
+})
 
 export {app}
