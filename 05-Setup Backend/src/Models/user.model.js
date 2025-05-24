@@ -40,7 +40,7 @@ const userSchema = new Schema({
         type : String,
         required : [true, 'Password is required']
     },
-    refereshToken : {
+    refreshToken : {
         type : String,
 
     }
@@ -53,7 +53,7 @@ userSchema.pre("save", async function(next){
     if(!this.isModified("password")) return next();
     // agar user passowrd change nahi kr rha so dobara hash bnane ke need nhi h 
 
-    this.password = bcrypt.hash(this.password,10)
+    this.password = await bcrypt.hash(this.password,10)
     next()
 
 }) // data ko sve krne se pehle kch functionality add kr sakte hain pre() middleware ke through ham yahan isse bcrypt krenge 
